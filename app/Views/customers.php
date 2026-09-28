@@ -1,24 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Customers List</title>
-    <style>
-        table { 
-            width: 100%; 
-            border-collapse: collapse; 
-            margin-top: 20px; 
-        }
-        th, td { 
-            border: 1px solid #ddd; 
-            padding: 10px; 
-            text-align: left; }
-        th { 
-            background-color: #f4f4f4; 
-        }
-    </style>
-</head>
-<body>
+
+<main>
     <h1>Customers Directory</h1>
     
     <table>
@@ -45,5 +26,4 @@
             <?php endforeach; ?>
         </tbody>
     </table>
-</body>
-</html>
+</main>

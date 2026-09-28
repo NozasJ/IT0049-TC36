@@ -13,7 +13,7 @@ class Users extends BaseController
             ['id' => 4, 'name' => 'David Miller', 'email' => 'david.m@example.com', 'role' => 'Manager'],
             ['id' => 5, 'name' => 'Elena Rostova', 'email' => 'elena.r@example.com', 'role' => 'Customer'],
         ];        
-        return view('users', $data);
+        return view('header').view('users', $data).view('footer');
     }
    
 }
