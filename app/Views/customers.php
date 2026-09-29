@@ -6,22 +6,20 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Name</th>
-                <th>Company</th>
+                <th>Full Name</th>
                 <th>Email</th>
-                <th>Contact</th>
-                <th>Status</th>
+                <th>Phone</th>
+                <th>Creation Date</th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($customers as $customer): ?>
             <tr>
                 <td><?= $customer['id']; ?></td>
-                <td><?= $customer['name']; ?></td>
-                <td><?= $customer['company']; ?></td>
+                <td><?= $customer['full_name']; ?></td>
                 <td><?= $customer['email']; ?></td>
-                <td><?= $customer['contact']; ?></td>
-                <td><?= $customer['status']; ?></td>
+                <td><?= $customer['phone']; ?></td>
+                <td><?= $customer['created_at']; ?></td>
             </tr>
             <?php endforeach; ?>
         </tbody>

@@ -5,18 +5,18 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Role</th>
+                <th>Username</th>
+                <th>Full Name</th>
+                <th>Creation Date</th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($users as $user): ?>
             <tr>
                 <td><?= $user['id']; ?></td>
-                <td><?= $user['name']; ?></td>
-                <td><?= $user['email']; ?></td>
-                <td><?= $user['role']; ?></td>
+                <td><?= $user['username']; ?></td>
+                <td><?= $user['full_name']; ?></td>
+                <td><?= $user['created_at']; ?></td>
             </tr>
             <?php endforeach; ?>
         </tbody>
