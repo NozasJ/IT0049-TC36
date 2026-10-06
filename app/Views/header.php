@@ -8,7 +8,7 @@
 <body>
     <header>
         <nav>
-            <a href="<?= '/' ?>">Home</a> 
-            <a href="<?= 'about' ?>">About Us</a>
+            <a href="javascript:history.back()">Back</a> 
+            <a href="<?= base_url('about') ?>">About Us</a>
         </nav>
     </header>

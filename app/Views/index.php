@@ -1,4 +1,4 @@
 <main>
-        <a href="<?= 'customers' ?>">Customers</a>
-        <a href="<?= 'users' ?>">Users</a>
+        <a href="<?= 'customers' ?>" style="width: 200px;">Customers</a>
+        <a href="<?= 'users' ?>"style="width: 200px;">Users</a>
 </main>
