@@ -26,11 +26,11 @@ class Users extends BaseController
 {
     $rules = [
         'username' => 'required|is_unique[users.username]',
-        'full_name' => 'required'
+        'full_name' => 'required',
+        'password' => 'required'
     ];
     $file = $this->request->getFile('avatar');
 
-    // Validate whenever a file was actually submitted, even if the upload failed
     if ($file && $file->getError() !== UPLOAD_ERR_NO_FILE) {
         $rules['avatar'] = [
             'rules' => [
@@ -67,12 +67,14 @@ class Users extends BaseController
         $model->insert([
             'username' => $this->request->getPost('username'),
             'full_name' => $this->request->getPost('full_name'),
+            'password'  => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
             'avatar' => $newName
         ]);
     } else {
         $model->insert([
             'username' => $this->request->getPost('username'),
-            'full_name' => $this->request->getPost('full_name')
+            'full_name' => $this->request->getPost('full_name'),
+            'password'  => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT)
         ]);
     }
 

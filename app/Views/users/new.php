@@ -14,6 +14,9 @@
             </label>
             <input name='full_name' id='full_name' type='text' value="<?= old('full_name') ?>">
             <?= validation_show_error('full_name') ?>      
+            <label for="password">Password</label>
+            <input name="password" id="password" type="password">
+            <?= validation_show_error('password') ?>
             <label for="avatar">Profile Picture (JPG/PNG, Max 2MB)</label>
             <input type="file" name="avatar" id="avatar" accept="image/jpeg,image/png">
             <?= validation_show_error('avatar') ?>  
